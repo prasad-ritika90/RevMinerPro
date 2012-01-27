@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Review Miner </title>
+		<script src="decider.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="decider.css" type="text/css" />
+	</head>
+	<body>
+		<button onclick="redirect();" class="decisionNode" id="arrowQuestion">Cuisine</button>
+		<button class="decisionNode" id="arrowQuestion">Location</button>
+		<button class="decisionNode" id="arrowQuestion">Service</button>
+		<button class="decisionNode" id="arrowQuestion">Ambience</button>
+		<button onclick="changeBgPicture(this);" class="decisionNode" id="checkedQuestion">Serves Alcohol</button>
+		<button onclick="changeBgPicture(this);" class="decisionNode" id="checkedQuestion">Wheelchair Accessible</button>
+		<div>
+			<form method="LINK" action="restaurant.html">
+				<input id="button" type="submit" value="Search">
+			</form>
+			<form method="LINK" action="decider.html">
+				<input id="button" type="submit" value="Reset">
+			</form>
+		</div>
+	</body>
+</html>
