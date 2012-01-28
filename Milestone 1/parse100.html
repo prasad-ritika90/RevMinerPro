@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+//var object = new ActiveXObject("Scripting.FileSystemObject");
+//var file = object.CreateTextFile("result100.txt", true);
+
+$.getJSON('test.metadata', function(data){
+
+$.each(data, function(key, val) {
+document.write("INSERT INTO restaurant VALUES ('" + key + "'");
+$.each(val, function(key2, val2){
+document.write(",'" + val2 + "'");
+});
+
+document.write(');<br/>');
+});
+//file.Close();
+
+});
+alert("Done!");
+
+});
+</script>
+</head>
+</html>
