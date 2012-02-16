@@ -2,11 +2,12 @@ window.onload = function() {
 	//var key = window.location.href.split('?')[1].split('=')[1];
 	var params = window.location.href.split('?')[1].split('&');
 	key = params[0].split('=')[1].split('%20').join('-');
+	var php = "http://ec2-23-21-229-182.compute-1.amazonaws.com/getRestaurants.php";
 	if (key == "") {
 		key = window.location.href.split('?')[1];
+		php = "http://ec2-23-21-229-182.compute-1.amazonaws.com/getDeciderRestaurants.php";
 	}
-
-	loadAjax("results", "http://ec2-23-21-229-182.compute-1.amazonaws.com/getRestaurants.php", key);
+	loadAjax("results", php, key);
 };
 
 function display(restaurants){
