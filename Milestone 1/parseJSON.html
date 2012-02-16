@@ -1,0 +1,26 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+  var object = new ActiveXObject("Scripting.FileSystemObject");
+  var file = object.CreateTextFile("parsed.txt", true);
+
+$.getJSON('all.metaData', function(data){
+  $.each(data, function(key, val) {
+    	file.Write(key);
+	$.each(val, function(attribute, values){
+		file.Write(',$' + values);
+	});
+	file.Write(',%');
+  });
+file.Close();
+
+});
+alert("Success");
+
+});
+</script>
+</head>
+</html>
