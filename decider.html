@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Review Miner </title>
+		<script src="decider.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="decider.css" type="text/css" />
+		
+		<header> 
+			<a href="main.html">
+				<div id="logo"> U n d e c i d e d </div>
+				<hr id="thick">
+			</a>
+		</header>
+	</head>
+	<body>
+		<button onclick="showQuestion(this);" class="decisionNode" id="arrowQuestion" value="0">Cuisine</button>
+		<div id="question" class="hide">
+			<fieldset>
+			<div>
+				<span>Cuisine:</span>
+				<input id="searchBoxOne" type="search" placeholder="Restaurant Name..."/>
+			</div>
+			<br/>
+			<div>
+				Good for:
+				<label> <input onclick="setMeal(this)" type=checkbox checked="checked" name=0> Lunch </label>
+				<label> <input onclick="setMeal(this)" type=checkbox checked="checked" name=1> Dinner </label>
+			</div>
+			</fieldset>
+		</div>
+		<button onclick="showQuestion(this);" class="decisionNode" id="arrowQuestion" value="1">Location</button>
+		<div id="question" class="hide">
+			<fieldset>
+			<div>
+				<span>Zipcode:</span>
+				<input id="searchBoxOne" type="search" placeholder="E.g. 98105..."/>
+				<span>City:</span>
+				<input id="searchBoxOne" type="search" placeholder="E.g. Seattle..."/>
+			</div>
+
+			</fieldset>
+		</div>
+		<button onclick="showQuestion(this);" class="decisionNode" id="arrowQuestion" value="2">Serves Alcohol</button>
+		<div id="question" class="hide">
+			<fieldset>
+			<div>
+				<label> <input onclick="setAlcohol(this)" type=radio name=alcohol value="Yes"> Yes </label>
+				<label> <input onclick="setAlcohol(this)" type=radio name=alcohol value="No"> No </label>
+				<label> <input onclick="setAlcohol(this)" type=radio name=alcohol value=""> Doesn't Matter </label>
+
+			</div>
+			</fieldset>
+		</div>
+		<button onclick="showQuestion(this);" class="decisionNode" id="arrowQuestion" value="3">Price</button>
+		<div id="question" class="hide">
+			<fieldset>
+			<div>
+				<label> <input type=checkbox onclick="setPrice(this)" checked="checked" name=$> $ </label>
+				<label> <input type=checkbox onclick="setPrice(this)" checked="checked" name=$$> $$ </label>
+				<label> <input type=checkbox onclick="setPrice(this)" checked="checked" name=$$$> $$$ </label>
+				<label> <input type=checkbox onclick="setPrice(this)" checked="checked" name=$$$$> $$$$ </label>
+
+			</div>
+			</fieldset>
+		</div>
+		<button onclick="changeBgPicture(this);" class="decisionNode" id="checkedQuestion" value="4">Open Now</button>
+		<button onclick="changeBgPicture(this);" class="decisionNode" id="checkedQuestion" value="5">Wheelchair Accessible</button>
+		<button onclick="changeBgPicture(this);" class="decisionNode" id="checkedQuestion" value="6">Has Wifi</button>
+		<div>
+			<form method="LINK" action="javascript:submit()">
+				<input id="button" type="submit" value="Search">
+			</form>
+			<form method="LINK" action="decider.html">
+				<input id="button" type="submit" value="Reset">
+			</form>
+		</div>
+	</body>
+</html>
