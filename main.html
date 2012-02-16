@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Review Miner </title>
+		<link rel="stylesheet" href="main.css" type="text/css" />
+		<script src="main.js" type="text/javascript"></script>
+		<script src="ajaxLoad.js" type="text/javascript"></script>
+		<header> 
+			<!--<img id="logo" src="logoNew.png" alt="We mine your reviews" />-->
+			<a href="main.html">
+				<div id="logo"> U n d e c i d e d </div>
+				<hr id="thick">
+			</a>
+		</header>
+		<div id="searchBoxOne">
+			<form id="searchbox" action="javascript:search()">
+				<input id="search" type="text" placeholder="Search for restaurant">
+				<input id="submit" type="submit" value="Search">
+			</form>
+		</div>
+		<div>
+			<form method="LINK" action="decider.html">
+				<input id="decider" type="submit" value="Decider">
+			</form>
+			<span id="boldText">Need Help Deciding?<br/> Use our decider!</span>
+		</div>
+	</head>
+	<hr class="divider"/>
+	<div id="tvFrame">
+		<div id="imageBox">
+			<a onclick="favoriteClicked(this);" href=""><img id="tvShow" src='featuredRestaurants/image1.jpg' /></a>
+			<a onclick="favoriteClicked(this);" href=""><img id="tvShow" src='featuredRestaurants/image2.jpg' /></a>
+			<a onclick="favoriteClicked(this);" href="restaurant.html?key=thai-tom-seattle"><img id="tvShow" src='featuredRestaurants/image3.jpg' /></a>
+			<a onclick="favoriteClicked(this);" href="restaurant.html?key=the-cheesecake-factory-seattle"><img id="tvShow" src='featuredRestaurants/image4.jpg' /></a>
+		</div>
+		<div id="messageBox">
+			<a href="" id="tvTitle">Featured Restaurant:</a><br/>
+			<a onclick="favoriteClicked(this);" href="" id="messageShow"> Shaalimar: Indian Tandoor </a>
+			<a onclick="favoriteClicked(this);" href="" id="messageShow"> Japonessa: Japanese, Sushi Bar </a>
+			<a onclick="favoriteClicked(this);" href="restaurant.html?key=thai-tom-seattle" id="messageShow"> Thai Toms: Thai Cuisine </a>
+			<a onclick="favoriteClicked(this);" href="restaurant.html?key=the-cheesecake-factory-seattle" id="messageShow"> Cheesecake Factory: The American Taste </a>
+		</div>
+	</div>
+	<div id="display">
+	</div>
+</html>
