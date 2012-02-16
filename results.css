@@ -1,0 +1,25 @@
+#logo {
+	//float: left;
+	font-size: 24px;
+	text-align:center;
+	font-weight: bold;
+	background-color: #c4d9df;
+}
+
+a {
+    color: #00A0C6;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+.restaurantName {
+	color: #000066;
+	font-weight: bold;
+	font-size: 20px;
+}
